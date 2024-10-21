@@ -33,6 +33,9 @@ function openModal(imageSrc) {
   modal.style.display = "block";
   modalImage.src = imageSrc;
 }
+document.getElementById('profile').addEventListener('click', function() {
+  window.location.href = '/about.html';
+});
 
 // Menutup modal
 function closeModal() {
