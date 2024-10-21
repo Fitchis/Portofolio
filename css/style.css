@@ -32,6 +32,7 @@ h2 {
 h3 {
     margin: 10; /* Menghilangkan margin default untuk h3 */
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -40,6 +41,7 @@ body {
     color: #ffffff;
     height: 100vh;
 }
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -152,13 +154,43 @@ body {
 .profile-pic img {
     width: 100%;
     height: auto;
-    border-radius: 50%; /* Jika ingin membuat gambar profil berbentuk lingkaran */
+    border-radius: 50%; 
 }
 .profile-pic:hover {
     transform: scale(1.05);
   }
+/* cv */
+.download-cv {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #a8dce7;
+    border-radius: 25px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
 
+.download-cv i {
+    font-size: 1rem;
+    transition: transform 0.3s ease; 
+}
 
+.download-cv:hover {
+    background: linear-gradient(90deg, #4c6d6a, #4a5a64); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px); 
+}
+
+.download-cv:hover i {
+    transform: translateX(2px);
+}
+
+.download-cv:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+/* text animasi */
 .text-content {
     max-width: 600px;
     text-align: center;
@@ -167,7 +199,7 @@ body {
 
 .text-content h1 {
     font-size: 48px;
-    margin-bottom: 10px; /* Atur margin bawah agar lebih dekat dengan elemen berikutnya */
+    margin-bottom: 10px; 
 }
 
 .text-content h1 span {
@@ -192,7 +224,7 @@ body {
     display: flex;
     gap: 10px; 
     margin: 10px;
-    margin-top: 70px;
+    margin-top: 20px;
     justify-content: center;
     align-items: center; 
 }
@@ -427,7 +459,7 @@ body {
 }
 
 .skill-item {
-    background: linear-gradient(135deg, #2c2c2e, #1c1c1e); /* Efek gradasi yang lebih halus */
+    /* background: linear-gradient(135deg, #2c2c2e, #1c1c1e); */
     color: #fff;
     padding: 15px 25px;
     border-radius: 12px;
@@ -522,7 +554,8 @@ body {
     padding: 12px;
     margin-bottom: 10px;
     border-radius: 5px;
-    border: 1px solid #79e2ff; 
+    color: #ffffff;
+    border: 1px solid #286272; 
     background: rgba(255, 255, 255, 0.2); 
     transition: all 0.3s ease;/
   }
@@ -718,7 +751,7 @@ body {
   }
   
   .certificate-card:hover {
-    transform: translateY(-5px) scale(1.05); /* Efek hover yang lebih ringan */
+    transform: translateY(-5px) scale(1.05); 
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
   }
   
@@ -747,21 +780,25 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 10px; /* Padding lebih kecil */
-    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px; 
+    background-color: rgba(0, 0, 0, 0.6); 
     color: #fff;
     text-align: center;
     transition: background-color 0.3s ease;
-  }
-  
-  .certificate-description h3 {
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Menyelaraskan teks deskripsi secara vertikal */
+}
+
+.certificate-description h3 {
     font-size: 1rem; /* Ukuran font lebih kecil */
     margin-bottom: 5px;
-  }
-  
-  .certificate-description p {
+}
+
+.certificate-description p {
     font-size: 0.8rem; /* Ukuran font deskripsi lebih kecil */
-  }
+}
   .certificate-section h2 {
     text-align: center; /* Membuat judul di tengah */
     font-size: 2rem; /* Ukuran font lebih besar */
@@ -785,8 +822,8 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8); /* Warna latar belakang modal */
-  }
+    background-color: rgba(0, 0, 0, 0.8);
+}
   
   .modal-content {
     display: block;
