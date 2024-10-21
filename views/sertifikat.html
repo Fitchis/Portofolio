@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificates</title>
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- AOS CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Certificate Section -->
+    <div class="certificate-section" data-aos="fade-up">
+      <h2>CERTIFICATES</h2>
+      <div class="certificates">
+        <div
+          class="certificate-card"
+          onclick="openModal('/assets/images/Sertif-img/GAds.jpg')"
+          data-aos="zoom-in"
+        >
+          <div class="certificate-content">
+            <img
+              src="/assets/images/Sertif-img/GAds.jpg"
+              alt="Certificate 1"
+              loading="lazy"
+            />
+            <div class="certificate-description">
+              <h3>Google ADS Search</h3>
+              <p>Certified by Google ads skillshop</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="certificate-card"
+          onclick="openModal('/assets/images/Sertif-img/GDGdm.jpg')"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+        >
+          <div class="certificate-content">
+            <img
+              src="/assets/images/Sertif-img/GDGdm.jpg"
+              alt="Certificate 2"
+              loading="lazy"
+            />
+            <div class="certificate-description">
+              <h3>The Fundamentals of Digital Marketing</h3>
+              <p>Certified by Google Digital Garage</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="certificate-card"
+          onclick="openModal('/assets/images/Sertif-img/Sem.jpg')"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        >
+          <div class="certificate-content">
+            <img
+              src="/assets/images/Sertif-img/Sem.jpg"
+              alt="Certificate 3"
+              loading="lazy"
+            />
+            <div class="certificate-description">
+              <h3>Semrush Seo Toolkit</h3>
+              <p>Certified by Semrush Academy</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="certificate-card"
+          onclick="openModal('/assets/images/Sertif-img/Seo.jpg')"
+          data-aos="zoom-in"
+          data-aos-delay="300"
+        >
+          <div class="certificate-content">
+            <img
+              src="/assets/images/Sertif-img/Seo.jpg"
+              alt="Certificate 4"
+              loading="lazy"
+            />
+            <div class="certificate-description">
+              <h3>Search Engine Optimaztion (SEO)</h3>
+              <p>Certified by HubSpot Academy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage" />
+    </div>
+
+    <!-- AOS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init(); // Inisialisasi AOS
+    </script>
+  </body>
+</html>
