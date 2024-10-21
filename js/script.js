@@ -16,7 +16,7 @@ setInterval(() => {
 
 // Mengambil konten dari certificates.html dan menambahkannya ke index.html
 document.addEventListener("DOMContentLoaded", function () {
-  fetch('/assets/CV.pdf')
+  fetch('/views/sertifikat.html')
     .then(response => response.text())
     .then(data => {
       // Memasukkan konten dari certificates.html ke dalam div dengan id certificate-container
