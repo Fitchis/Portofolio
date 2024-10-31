@@ -8,13 +8,13 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-/* Keyframes for scrolling animation */
+
 @keyframes scrollLeft {
     0% {
-        transform: translateX(100%); /* Start from the right */
+        transform: translateX(100%); 
     }
     100% {
-        transform: translateX(-100%); /* Move to the left */
+        transform: translateX(-100%); 
     }
 }
 @keyframes pulse {
@@ -26,11 +26,11 @@
     }
 }
 h2 {
-    font-family: 'Poppins', sans-serif; /* Ganti dengan font pilihan Anda */
+    font-family: 'Poppins', sans-serif; 
 }
 
 h3 {
-    margin: 10; /* Menghilangkan margin default untuk h3 */
+    margin: 10; 
 }
 
 body {
@@ -53,8 +53,8 @@ body {
     transition: background 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
-    max-width: 50rem; /* Membatasi ukuran lebar maksimum */
-    min-width: 50rem; /* Membatasi ukuran lebar minimum */
+    max-width: 50rem;
+    min-width: 50rem;
     margin: 0 auto;
 }
 
@@ -245,6 +245,7 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
     text-decoration: none; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icons a:hover {
@@ -252,6 +253,7 @@ body {
     color: #000;
     transform: scale(1.1) rotate(5deg); 
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+    transform: rotate(360deg) scale(1.1);
 }
 .hire-me {
     display: inline-block;
@@ -266,6 +268,7 @@ body {
 .hire-me:hover {
     background: #a8dce7;
     color: #000;
+    transform: scale(1.05);
 }
 
 .container, .profile-pic, .text-content {
@@ -317,7 +320,7 @@ body {
     height: 400px; 
     position: relative;
     overflow: hidden;
-    transition: transform 0.3s ease-in-out; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
     border-radius: 10px;
     border: 2px solid #a8dce7;
 }
@@ -358,6 +361,11 @@ body {
     transform: scale(1.3);
 }
 
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
 .card:hover .card-description {
     opacity: 1;
 }
@@ -367,18 +375,20 @@ body {
     margin: 50px 0;
     padding: 20px;
     animation: fadeIn 1s ease-in-out;
-    overflow: hidden; /* Hide overflow of the skills section */
-    position: relative; /* Ensure positioning context for children */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    font-family: 'Poppins', sans-serif; /* Modern font */
+    overflow: hidden; 
+    position: relative; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    font-family: 'Poppins', sans-serif;
 }
 
 .skills-container {
     display: flex;
     justify-content: flex-start;
-    flex-wrap: nowrap; /* Prevent wrapping */
-    animation: scrollLeft 15s linear infinite; /* Scroll from right to left */
+    flex-wrap: nowrap;
+    animation: scrollLeft 15s linear infinite; 
 }
+
+
 
 .skill {
     background-color: #333;
@@ -404,43 +414,46 @@ body {
 
 /*  skill colors */
 .skill-html {
-    background-color: #E34F26; /* Warna HTML5 */
+    background-color: #E34F26; 
 }
 
 .skill-css {
-    background-color: #1572B6; /* Warna CSS3 */
+    background-color: #1572B6; 
 }
 
 .skill-js {
-    background-color: #F7DF1E; /* Warna JavaScript */
-    color: #333; /* Teks lebih gelap agar terbaca */
-}
-
-.skill-react {
-    background-color: #61DAFB; /* Warna React */
+    background-color: #F7DF1E; 
     color: #333;
 }
 
+.skill-react {
+    background-color: #61DAFB; 
+    color: #333;
+}
+
+.skill-laravel {
+    background-color: #FF2D20; 
+}
 .skill-node {
-    background-color: #83CD29; /* Warna Node.js */
+    background-color: #83CD29; 
 }
 
 .skill-mysql {
-    background-color: #00758F; /* Warna MySQL */
+    background-color: #00758F;
 }
 .skill:hover {
-    transform: translateY(-5px); /* Slight lift effect on hover */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Softer and larger shadow */
-    background-color: #444; /* Slightly darker background on hover */
+    transform: translateY(-5px); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); 
+    background-color: #444; 
     animation: pulse 0.6s infinite alternate;
 }
 
 /* skillstext */
 .skills-section {
-    margin: 40px auto; /* Satu baris untuk margin atas dan tengah */
+    margin: 40px auto; 
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Shadow untuk kesan kedalaman */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     max-width: 1200px;
 }
 
@@ -448,33 +461,46 @@ body {
     font-size: 2em;
     margin-bottom: 20px;
     font-weight: 400;
-    text-align: center; /* Pusatkan teks */
+    text-align: center; 
 }
 
 .skills-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column; 
     gap: 15px;
-    justify-content: center; /* Membuat skill-item berada di tengah */
+    justify-content: center; 
 }
 
 .skill-item {
-    /* background: linear-gradient(135deg, #2c2c2e, #1c1c1e); */
+    display: flex;
+    flex-direction: column; 
     color: #fff;
-    padding: 15px 25px;
-    border-radius: 12px;
     font-size: 1em;
-    text-align: center;
-    transition: background 0.4s ease, transform 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Menambahkan shadow pada setiap item */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
 }
-
 .skill-item:hover {
-    background: linear-gradient(135deg, #3e3e40, #2c2c2e); /* Warna gradasi yang berubah pada hover */
-    transform: translateY(-8px); /* Angkat item lebih tinggi pada hover */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Shadow lebih tebal pada hover */
+    transform: scale(1.05);
+    color: #a8dce7; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+/* progressbar */
+.progress-bar {
+    background-color: #444; 
+    border-radius: 5px;
+    overflow: hidden; 
+    height: 10px; 
+    margin-top: 5px; 
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5); 
 }
 
+.progress {
+    background: linear-gradient(90deg, #4c6d6a, #4a5a64);
+    height: 100%; 
+    transition: width 0.4s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.7); 
+    
+}
 /* footer */
 .footer {
     background-color: #101422;
@@ -525,7 +551,7 @@ body {
     font-size: 2.5rem;
     color: #ffffff;
     margin-bottom: 20px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); 
   }
   
   .contact p {
@@ -567,17 +593,17 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s; /* Transform effect on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Button shadow */
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
   
 .contact form button:hover {
     background-color: #21a1f1;
-    transform: translateY(-2px); /* Lift effect on hover */
+    transform: translateY(-2px); 
 }
 
 .contact form button:active {
-    transform: translateY(1px); /* Push down effect when clicked */
+    transform: translateY(1px);
 }
 
 /* About Section */
@@ -676,52 +702,52 @@ body {
 /* about sosmed icon */
   .sosmed-container {
     display: flex;
-    align-items: center; /* Menyelaraskan item di tengah secara vertikal */
-    justify-content: center; /* Memusatkan konten secara horizontal */
-    gap: 10px; /* Jarak antara judul dan ikon */
+    align-items: center; 
+    justify-content: center;
+    gap: 10px; 
 }
 
 .sosmed-icons {
     display: flex;
-    gap: 10px; /* Jarak antar ikon */
+    gap: 10px; 
 }
 
 .sosmed-icons a {
-    color: #0077b5; /* Warna ikon LinkedIn */
-    text-decoration: none; /* Menghilangkan garis bawah */
-    font-size: 24px; /* Ukuran ikon */
-    transition: color 0.3s, transform 0.3s; /* Transisi untuk warna dan transformasi */
+    color: #0077b5;
+    text-decoration: none; 
+    font-size: 24px; 
+    transition: color 0.3s, transform 0.3s;
 }
 
 .sosmed-icons a:hover {
-    color: #005582; /* Warna saat hover untuk LinkedIn */
-    transform: scale(1.2); /* Membesarkan ikon saat hover */
+    color: #005582; 
+    transform: scale(1.2); 
 }
 
 .sosmed-icons a.instagram {
-    color: #E1306C; /* Warna ikon Instagram */
+    color: #E1306C;
 }
 
 .sosmed-icons a.instagram:hover {
-    color: #C13584; /* Warna saat hover untuk Instagram */
+    color: #C13584; 
 }
 
 .riwayat-container {
     display: flex;
-    flex-direction: column; /* Mengatur elemen dalam kolom */
-    gap: 10px; /* Jarak antar item */
+    flex-direction: column; 
+    gap: 10px; 
 }
 .riwayat-item {
     display: flex;
-    justify-content: flex-start; /* Mengatur item sejajar ke kiri */
-    align-items: center; /* Menyelaraskan item secara vertikal */
+    justify-content: flex-start; 
+    align-items: center; 
 }
 .tahun {
-    font-weight: bold; /* Membuat tahun lebih tebal */
-    margin-right: 10px; /* Jarak antara tahun dan keterangan */
+    font-weight: bold; 
+    margin-right: 10px; 
 }
 .keterangan {
-    flex-grow: 1; /* Membuat keterangan mengisi ruang yang tersisa */
+    flex-grow: 1;
 }
 
 /* Certificate Section */
@@ -731,11 +757,23 @@ body {
     padding: 50px 20px;
   }
   
+  .certificate-section p{
+    text-align: center;
+  }
+  .certificate-section p i {
+    margin-right: 8px; 
+    transition: color 0.2s ease;
+}
+
+.certificate-section p:active i {
+    color: #007bff; 
+}
+
   .certificates {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px; /* Mengurangi gap antar kartu */
+    gap: 20px; 
   }
   
   .certificate-card {
@@ -745,8 +783,8 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 200px; /* Ukuran lebih kecil */
-    height: 280px; /* Tinggi lebih kecil */
+    width: 200px; 
+    height: 280px; 
     cursor: pointer;
   }
   
@@ -927,15 +965,24 @@ body {
       .contact form button {
         padding: 10px 16px;
       }
-    
+      
+      .skills-list {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .skill-item {
+        width: 100%; 
+        text-align: center; 
+    }
 }
 
 
 @media (max-width: 480px) {
 
     .container {
-        flex-direction: row; /* Tetap horizontal */
-        justify-content: center; /* Atur jarak antar elemen */
+        flex-direction: row; 
+        justify-content: center; 
         height: 60px;
         padding: 0 15px;
     }
@@ -958,7 +1005,7 @@ body {
         font-size: 20px;
     }
     .nav {
-        flex-direction: row; /* Ubah layout navigasi menjadi kolom */
+        flex-direction: row; 
         align-items: center;
         justify-content: center;
         gap: 5px;

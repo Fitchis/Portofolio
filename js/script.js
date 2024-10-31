@@ -56,3 +56,7 @@ fetch('views/footer.html')
   .then(data => {
     document.body.insertAdjacentHTML('beforeend', data);
   });
+
+
+
+  
